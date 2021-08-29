@@ -79,9 +79,9 @@ SMK Cordova Sekolah berbasis Pesantren (Boarding Islamic School</p> -->
             <style>
                 @import url(@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
                 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
-                .description { text-align: justify;}
-                @import url(@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
-                @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+                .description {
+                     text-align: justify;
+                    }
                 #read {
                 line-height:1em;
                 letter-spacing:0.06em;
@@ -136,7 +136,7 @@ SMK Cordova Sekolah berbasis Pesantren (Boarding Islamic School</p> -->
                 <div class="col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
                     <!-- <a href="{{url('/usaha-perjalanan-wisata')}}"> -->
                         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                            <img src="{{asset('images/wisata.jpg')}}" alt="Perjalanan Wisata" class="img-thumbnail mb-4" style="width: 600px; height: 330px;">
+                            <img src="{{asset('images/wisata.jpg')}}" alt="Perjalanan Wisata" class="img-thumbnail mb-4" style="width: 600px; height: 280px;">
                             <h4 class="title text-center">Usaha Perjalanan Wisata</h4>
                             <p class="description text-align-justify">Pariwisata di Indonesia sedang mengalami perkembangan yang cukup pesat dan menjadikan bidang ini
                                 sebagai salah satu bidang yang sangat menjanjikan di masa depan. Ilmu Pariwisata berhubungan erat dengan sejarah, geografi, budaya, 

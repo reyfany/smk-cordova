@@ -17,7 +17,7 @@
                         <a href="https://www.facebook.com/smkcordova" class="facebook"><i class="bx bxl-facebook"></i></a>
                         <a href="https://www.instagram.com/smkcordovabis/" class="instagram"><i class="bx bxl-instagram"></i></a>
                         <a href="https://www.youtube.com/channel/UCSCpl4aSkC2NivBj06EHLUA" class="youtube"><i class="bx bxl-youtube"></i></a>
-                        <a href="cordovasmk01@gmail.com" class="email"><i class="bx bxl-email"></i></a>
+                        <a href="https://www.cordovasmk01@gmail.com" class="email"><i class="bx bx-bookmark"></i></a>
                     </div>
                     </div>
                 </div>
