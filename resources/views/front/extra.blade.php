@@ -7,7 +7,7 @@
 <section class="portfolio">
     <div class="container">
         <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-            <h2>ektra</h2>
+            <h2>Ekstrakurikuler</h2>
             <p>
                 Kegiatan-kegiatan Ekstrakulikuler
             </p>
@@ -19,7 +19,7 @@
                     <li data-filter="*" class="filter-active">Semua</li>
                     <li data-filter=".kategori1">Paskibraka</li>
                     <li data-filter=".kategori2">Hadrah</li>
-                    <li data-filter=".kategori3">Paduan Suarar</li>
+                    <li data-filter=".kategori3">Paduan Suar</li>
                     <li data-filter=".kategori4">Seni Musik</li>
                 </ul>
             </div>

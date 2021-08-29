@@ -6,7 +6,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>extra</h1>
+                <h1>Ekstrakurikuler</h1>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="{{url('administrator')}}">Dashboard</a></li>
-                    <li><a href="{{url('administrator/extra')}}">ektra</a></li>
+                    <li><a href="{{url('administrator/extra')}}">Ekstrakurikuler</a></li>
                     <li class="active">{{$pagename}}</li>
                 </ol>
             </div>

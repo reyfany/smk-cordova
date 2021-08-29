@@ -12,14 +12,14 @@ class ExtraController extends Controller
 {
     public function index()
     {
-        $pagename = 'Extra';
+        $pagename = 'Ekstrakurikuler';
         $data = extra::all();
         return view('admin.extra.index', compact('pagename', 'data'));
     }
 
     public function create()
     {
-        $pagename = 'Tambah Foto';
+        $pagename = 'Tambah Data';
         $data_kategori = kategori::all();
         return view('admin.extra.create', compact('pagename', 'data_kategori', ));
     }
@@ -62,7 +62,7 @@ class ExtraController extends Controller
 
     public function edit($id)
     {
-        $pagename = 'Edit Foto';
+        $pagename = 'Edit Data';
         $data = extra::find($id);
         $data_kategori = kategori::all();
         return view('admin.extra.edit', compact('pagename', 'data', 'data_kategori'));

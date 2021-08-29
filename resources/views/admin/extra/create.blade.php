@@ -15,7 +15,7 @@
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="{{url('administrator')}}">Dashboard</a></li>
-                    <li><a href="{{url('administrator/extra')}}">ekstra</a></li>
+                    <li><a href="{{url('administrator/extra')}}">Ekstrakurikuler</a></li>
                     <li class="active">{{$pagename}}</li>
                 </ol>
             </div>
