@@ -7,7 +7,7 @@
 <section class="portfolio">
     <div class="container">
         <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-            <h2>Galeri</h2>
+            <h2>ektra</h2>
             <p>
                 Kegiatan-kegiatan Ekstrakulikuler
             </p>
@@ -29,10 +29,10 @@
             @foreach($data as $i)
             <div class="col-lg-4 col-md-6 portfolio-item {{'kategori'.$i->id_kategori}}">
                 <div class="portfolio-wrap">
-                    <img src="{{asset('front/assets/img/galeri/'.$i->image)}}" class="img-fluid" alt="" />
+                    <img src="{{asset('front/assets/img/extra/'.$i->image)}}" class="img-fluid" alt="" />
                     <div class="portfolio-links">
-                        <a href="{{asset('front/assets/img/galeri/'.$i->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{$i->nama_foto}}"><i class="bx bx-plus"></i></a>
-                        <a href="{{route('front-galeri.show',$i->id)}}" title="More Details"><i class="bx bx-link"></i></a>
+                        <a href="{{asset('front/assets/img/extra/'.$i->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{$i->nama_foto}}"><i class="bx bx-plus"></i></a>
+                        <a href="{{route('front-extra.show',$i->id)}}" title="More Details"><i class="bx bx-link"></i></a>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\berita;
 use App\Models\galeri;
+use App\Models\extra;
 use App\Models\kategori;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,8 @@ class FrontController extends Controller
     {
         $galeri = galeri::all();
         $berita = berita::all();
-        return view('front.index', compact('galeri', 'berita'));
+        $extra = extra::all();
+        return view('front.index', compact('galeri', 'berita', 'extra' ));
     }
 
     /**

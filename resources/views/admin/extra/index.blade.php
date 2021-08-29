@@ -6,7 +6,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Galeri</h1>
+                <h1>ektra</h1>
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
                             <strong class="card-title">{{$pagename}}</strong>
                         </div>
                         <div class="col-3 d-flex justify-content-end">
-                            <a href="{{route('galeri.create')}}" class="btn btn-primary">Tambah</a>
+                            <a href="{{route('extra.create')}}" class="btn btn-primary">Tambah</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -63,7 +63,7 @@
                                 <tr>
                                     <td>{{++$i}}</td>
                                     <td>{{$row->nama_foto}}</td>
-                                    <td><img width="250px" src="{{asset('front/assets/img/galeri/'.$row->image)}}"></td>
+                                    <td><img width="250px" src="{{asset('front/assets/img/extra/'.$row->image)}}"></td>
                                     @switch($row->id_kategori)
                                         @case (1) <td>Pelajaran</td>
                                             @break
@@ -75,9 +75,9 @@
                                             @break
                                     @endswitch
                                     <td>{{$row->deskripsi}}</td>
-                                    <td><a href="{{route('galeri.edit',$row->id)}}" class="btn btn-primary">Edit</a></td>
+                                    <td><a href="{{route('extra.edit',$row->id)}}" class="btn btn-primary">Edit</a></td>
                                     <td>
-                                        <form action="{{route('galeri.destroy', $row->id)}}" method="post">
+                                        <form action="{{route('extra.destroy', $row->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-danger">Hapus</button>

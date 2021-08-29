@@ -209,20 +209,20 @@ SMK Cordova Sekolah berbasis Pesantren (Boarding Islamic School</p> -->
             </div>
 
             <div class="row portfolio-container" data-aos="fade-up">
-                    @foreach($galeri as $i=>$row)
+                    @foreach($extra as $i=>$row)
                 <div class="col-lg-4 col-md-6 portfolio-item {{'kategori'.$row->id_kategori}}">
                     <div class="portfolio-wrap">
-                        <img src="{{asset('front/assets/img/galeri/'.$row->image)}}" class="img-fluid" alt="" />
+                        <img src="{{asset('front/assets/img/extra/'.$row->image)}}" class="img-fluid" alt="" />
                         <div class="portfolio-links">
-                            <a href="{{asset('front/assets/img/galeri/'.$row->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{$row->nama_foto}}"><i class="bx bx-plus"></i></a>
-                            <a href="{{route('front-galeri.show',$row->id)}}" title="More Details"><i class="bx bx-link"></i></a>
+                            <a href="{{asset('front/assets/img/extra/'.$row->image)}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{$row->nama_foto}}"><i class="bx bx-plus"></i></a>
+                            <a href="{{route('front-extra.show',$row->id)}}" title="More Details"><i class="bx bx-link"></i></a>
                         </div>
                     </div>
                 </div>
                     @endforeach
             </div>
             <div>
-                <a href="{{('/front-galeri')}}" class="galeri-btn" data-aos="fade-up">Lihat foto lainnya<i class="bx bx-chevron-right"></i></a>
+                <a href="{{('/front-extra')}}" class="galeri-btn" data-aos="fade-up">Lihat foto lainnya<i class="bx bx-chevron-right"></i></a>
             </div>
         </div>
     </section>

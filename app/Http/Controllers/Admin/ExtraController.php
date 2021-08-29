@@ -3,25 +3,25 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\galeri;
+use App\Models\extra;
 use App\Models\kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-class GaleriController extends Controller
+class ExtraController extends Controller
 {
     public function index()
     {
-        $pagename = 'Galeri';
-        $data = galeri::all();
-        return view('admin.galeri.index', compact('pagename', 'data'));
+        $pagename = 'Extra';
+        $data = extra::all();
+        return view('admin.extra.index', compact('pagename', 'data'));
     }
 
     public function create()
     {
         $pagename = 'Tambah Foto';
         $data_kategori = kategori::all();
-        return view('admin.galeri.create', compact('pagename', 'data_kategori', ));
+        return view('admin.extra.create', compact('pagename', 'data_kategori', ));
     }
 
     public function store(Request $request)
@@ -37,7 +37,7 @@ class GaleriController extends Controller
         // nama file
         $nama_file = time() . "_" . $file->getClientOriginalName();
 
-        $data_galeri = new galeri([
+        $data_extra = new extra([
             'nama_foto' => $request->get('txtnama_foto'),
             'image' => $nama_file,
             'id_kategori' => $request->get('optionid_kategori'),
@@ -45,14 +45,14 @@ class GaleriController extends Controller
         ]);
 
         // isi dengan nama folder tempat kemana file diupload
-        $tujuan_upload = 'front/assets/img/galeri';
+        $tujuan_upload = 'front/assets/img/extra';
 
         // upload file
         $file->move($tujuan_upload, $nama_file);
 
-        $data_galeri->save();
+        $data_extra->save();
 
-        return redirect('administrator/galeri')->with('sukses', 'Foto berhasil disimpan');
+        return redirect('administrator/extra')->with('sukses', 'Foto berhasil disimpan');
     }
 
     public function show($id)
@@ -63,9 +63,9 @@ class GaleriController extends Controller
     public function edit($id)
     {
         $pagename = 'Edit Foto';
-        $data = galeri::find($id);
+        $data = extra::find($id);
         $data_kategori = kategori::all();
-        return view('admin.galeri.edit', compact('pagename', 'data', 'data_kategori'));
+        return view('admin.extra.edit', compact('pagename', 'data', 'data_kategori'));
     }
 
     public function update(Request $request, $id)
@@ -77,7 +77,7 @@ class GaleriController extends Controller
             'txtdeskripsi_foto' => 'required',
         ]);
 
-        $data = galeri::find($id);
+        $data = extra::find($id);
 
         $file = $request->file('image');
 
@@ -85,8 +85,8 @@ class GaleriController extends Controller
         if ($file == "") {
             $nama_file = $data->image;
         } else {
-            $gambar = galeri::where('id', $id)->first();
-            File::delete('front/assets/img/galeri/' . $gambar->image);
+            $gambar = extra::where('id', $id)->first();
+            File::delete('front/assets/img/extra/' . $gambar->image);
             $nama_file = time() . "_" . $file->getClientOriginalName();
         }
 
@@ -96,7 +96,7 @@ class GaleriController extends Controller
         $data->deskripsi = $request->get('txtdeskripsi_foto');
 
         // upload file
-        $tujuan_upload = 'front/assets/img/galeri';
+        $tujuan_upload = 'front/assets/img/extra';
         if ($file == "") {
 
         } else {
@@ -104,15 +104,15 @@ class GaleriController extends Controller
         }
 
         $data->save();
-        return redirect('administrator/galeri')->with('sukses', 'Foto berhasil diupdate');
+        return redirect('administrator/extra')->with('sukses', 'Foto berhasil diupdate');
     }
 
     public function destroy($id)
     {
-        $data = galeri::find($id);
-        $gambar = galeri::where('id', $id)->first();
-        File::delete('front/assets/img/galeri/' . $gambar->image);
+        $data = extra::find($id);
+        $gambar = extra::where('id', $id)->first();
+        File::delete('front/assets/img/extra/' . $gambar->image);
         $data->delete();
-        return redirect('administrator/galeri')->with('sukses', 'Foto berhasil dihapus');
+        return redirect('administrator/extra')->with('sukses', 'Foto berhasil dihapus');
     }
 }

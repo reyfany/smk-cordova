@@ -6,7 +6,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Galeri</h1>
+                <h1>Extrakulikuler</h1>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="{{url('administrator')}}">Dashboard</a></li>
-                    <li><a href="{{url('administrator/galeri')}}">Galeri</a></li>
+                    <li><a href="{{url('administrator/extra')}}">ekstra</a></li>
                     <li class="active">{{$pagename}}</li>
                 </ol>
             </div>
@@ -33,7 +33,7 @@
                         <strong>{{$pagename}}</strong>
                     </div>
                     <div class="card-body card-block">
-                        <form action="{{route('galeri.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
+                        <form action="{{route('extra.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
                             @csrf
                             <div class="row form-group">
                                 <div class="col col-md-3"><label for="text-input" class=" form-control-label">Nama Foto</label></div>
